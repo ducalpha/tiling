@@ -50,8 +50,8 @@ resX, resY = res.split('\n')[0].split('x')
 resX = int(resX)
 resY = int(resY)
 
-tasklistHeight = 29
-windowHeadHeight = 9
+tasklistHeight = 24
+windowHeadHeight = 22
 
 # nach goldenem schnitt:
 #big = 0.618
@@ -70,63 +70,63 @@ if sys.argv[1] == 'upper_left':
     x = 0
     y = 0
     width = resX * small
-    height = resY * big - windowHeadHeight
+    height = resY * big - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)
     
 elif sys.argv[1] == 'lower_left':
     x = 0
     y = resY * big - 1
     width = resX * small
-    height = resY * small - windowHeadHeight
+    height = resY * small - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)
     
 elif sys.argv[1] == 'upper_right':
     x = resX * small
     y = 0
     width = resX * big + 1
-    height = resY * big - windowHeadHeight
+    height = resY * big - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)
     
 elif sys.argv[1] == 'lower_right':
     x = resX * small
     y = resY * big - 1
     width = resX * big
-    height = resY * small - windowHeadHeight
+    height = resY * small - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)
 
 elif sys.argv[1] == 'bottom':
     x = 0
     y = resY * big - 1
     width = resX
-    height = resY * small - windowHeadHeight
+    height = resY * small - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)    
     
 elif sys.argv[1] == 'top':
     x = 0
     y = 0
     width = resX
-    height = resY * big - windowHeadHeight
+    height = resY * big - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)
 
 elif sys.argv[1] == 'left':
     x = 0
     y = 0
     width = resX * small
-    height = resY - windowHeadHeight
+    height = resY - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)    
 
 elif sys.argv[1] == 'right':
     x = resX * small
     y = 0
     width = resX * big
-    height = resY - windowHeadHeight
+    height = resY - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)
 
 elif sys.argv[1] == 'full':
     x = 0
     y = 0
     width = resX
-    height = resY - windowHeadHeight
+    height = resY - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)
     
 print time.time() - start
