@@ -50,8 +50,8 @@ resX, resY = res.split('\n')[0].split('x')
 resX = int(resX)
 resY = int(resY)
 
-tasklistHeight = 24
-windowHeadHeight = 22
+windowHeadHeight = 24
+tasklistHeight = 22
 
 # nach goldenem schnitt:
 #big = 0.618
@@ -110,14 +110,14 @@ elif sys.argv[1] == 'top':
 
 elif sys.argv[1] == 'left':
     x = 0
-    y = 0
+    y = windowHeadHeight
     width = resX * small
     height = resY - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)    
 
 elif sys.argv[1] == 'right':
     x = resX * small
-    y = 0
+    y = windowHeadHeight
     width = resX * big
     height = resY - windowHeadHeight - tasklistHeight
     setWindow(x, y, width, height)
